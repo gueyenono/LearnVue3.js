@@ -1,0 +1,21 @@
+[v-cloak] {
+  display: none;
+}
+
+.avg {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+
+}
+
+.inputs input {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.score {
+  margin: 1.5rem;
+}

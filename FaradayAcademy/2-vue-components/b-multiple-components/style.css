@@ -1,0 +1,8 @@
+input {
+  display: block;
+  margin: 10px;
+}
+
+[v-cloak] {
+  display: none;
+}

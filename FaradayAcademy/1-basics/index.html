@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Vue 3 Basics</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+
+      {{ greeting }}
+
+      <input v-model="greeting" @keyup.enter="greet(greeting + '!!!!!')">
+
+      <!-- @click is the same as v-on:click -->
+      <!-- <button @click="isVisible = !isVisible">Toggle box</button> -->
+      <!-- 13 is the keycode for Enter -->
+      <button @click="toggleBox">Toggle box</button>
+
+      <hr>
+
+      <div v-if="isVisible" class="box"></div>
+      <!-- <div v-else-if="isVisible2" class="box2"></div>
+      <div v-else class="box3"></div> -->
+      <!-- <div v-show="isVisible" class="box2"></div> -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>

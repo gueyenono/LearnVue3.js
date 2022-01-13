@@ -1,0 +1,21 @@
+.box {
+  background-color: purple;
+  height: 200px;
+  width: 200px;
+}
+
+.box2 {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+}
+
+.box3 {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+}
+
+[v-cloak] {
+  display: none;
+}

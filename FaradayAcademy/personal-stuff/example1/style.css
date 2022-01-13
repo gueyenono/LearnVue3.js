@@ -1,0 +1,21 @@
+.description {
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.title {
+
+}
+
+.main {
+
+}
+
+.sub {
+
+}
+
+[v-cloak] {
+  display: none;
+}

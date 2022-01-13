@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Example1 Vue3</title>
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="title main">
+        <h1>My First Vue3 App</h1>
+      </div>
+      <div class="title sub">
+        <h2>Trying out my own stuff</h2>
+      </div>
+    </div>
+
+    <div class="body" >
+
+      <div id="app" v-cloak>
+        <div class="task1">
+          <div class="user-input">
+
+            <h3>Enter your information</h3>
+
+            <div class="form">
+              <label for="first-name">First name</label><br>
+              <input v-model="firstName" id="firstname" type="text" placeholder="Your first name"><br>
+              <label for="last-name">Last name</label><br>
+              <input v-model="lastName" id="lastname" type="text" placeholder="Your last name"><br>
+              <button type="button" name="btm">Submit</button>
+            </div>
+
+          </div>
+
+          <div class="output">
+            <h3>Here is your info</h3>
+            <p>Your name is {{ firstName }} {{ middleName }} {{ lastName }}.</p>
+          </div>
+
+        </div>
+
+        <hr><hr>
+
+        <div class="task2">
+          <label for="fav-animal">Your favorite animal</label><br>
+          <input v-model="animal" id="animal" type="text" name="fav-animal" placeholder="What is your favorite animal?">
+          <p>Your favorite animal is a {{ animal }}.</p>
+        </div>
+
+        <hr><hr>
+
+        <div class="task3">
+          <label for="fav-animal">Your age</label><br>
+          <input v-model="age" @keyup.enter="logInput(age)" id="age" type="text" name="user-age" placeholder="How old are you?">
+
+          <div v-if="age <= 12"><button type="button" name="btn1">For kids</button></div>
+          <div v-else-if="age > 12 && age < 18"><button type="button" name="btn2">For teenagers</button></div>
+          <div v-else><button type="button" name="btn3">For adults</button></div>
+
+          <p>You are {{ age }} years old.</p>
+        </div>
+
+        <hr><hr>
+
+        <div class="task4">
+          <h3>Random image</h3>
+          <button v-on:click="toggleImg" type="button" name="btn-show">Toggle picture</button>
+          <button v-on:click="resizeImg" type="button" name="btn-resize">Resize picture</button>
+          <div v-show="isVisible" id="div-img">
+            <img id="img1" src="https://picsum.photos/200" alt="random image">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>
