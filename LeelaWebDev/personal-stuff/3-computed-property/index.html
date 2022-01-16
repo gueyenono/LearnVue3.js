@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using the mounted property</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <label>Enter Name of Speaker:</label> <br>
+      <input
+        v-bind:value = "name"
+        v-on:input="setName"
+      /><br>
+      <label>How many guests do you have?</label> <br>
+      <button v-on:click="decrement" >-</button>
+      <input
+        v-model="guests"
+        type="number"
+      ></input>
+      <button v-on:click="increment">+</button>
+      <br>
+      <button v-on:click="updateNameAndGuests">Enter</button>
+      <br><br>
+      <p>Thank you for accepting to speak at our conference Dr {{ displayedName }}.</p>
+      <p>We have reserved {{ displayedGuests }} spots for your guests.</p>
+      <p>{{ displaySpeaker() }}</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+  </body>
+</html>

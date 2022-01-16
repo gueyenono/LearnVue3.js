@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using the watch property</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>Character attributes</h1>
+
+      <label>Name</label>
+      <input type="text"/>
+
+      <br/><br/>
+
+      <label>Class</label>
+      <select>
+        <option value="Mage">Mage</option>
+        <option value="Warrior">Warrior</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Rogue">Rogue</option>
+      </select>
+
+      <br/><br/>
+
+      <label>Level</label>
+      <input v-model="level" type="number"/>
+
+      <br/><br/>
+
+      <label>Age</label>
+      <input v-model="age" type="number"/>
+
+      <br/><br/>
+
+      <button>Enter</button>
+
+      <div>
+        <p>Your attack power is: {{ computeAtk }}.</p>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+  </body>
+</html>

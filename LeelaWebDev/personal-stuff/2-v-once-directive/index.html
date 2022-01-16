@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using the v-once directive</title>
+  </head>
+  <body>
+
+    <div id="app" v-cloak>
+      <div v-once class="text-output">{{ rnd }}</div>
+      <div class="text-output">{{ rnd }}</div>
+      <button v-on:click="setRnd" class="btn">Generate Random</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>

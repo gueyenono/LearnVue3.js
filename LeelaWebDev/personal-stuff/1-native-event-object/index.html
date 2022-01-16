@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using the native $event object in Vue 3</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>The native $event object</h1>
+
+      <form>
+        <label for="user-text">Enter text here</label>
+        <input
+          v-on:input="setInputText"
+          v-on:keyup.enter="updateText"
+          name="user-text"
+          placeholder="Your text"
+        />
+        <button
+           v-on:click.prevent="updateText"
+           name="button"
+        >
+          Submit
+        </button>
+      </form>
+
+      <div class="user-text-output">
+        {{ updatedText }}
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>
