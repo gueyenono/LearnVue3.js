@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using Dynamic CSS Styling in Vue3</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>Find the correct answer</h1>
+      <p>JESUS-CHRIST is ...</p>
+      <label for="answer">Answer:</label>
+      <input
+        v-bind:value="inputText"
+        v-on:input="setInputText"
+        type="text"
+        name="Answer"
+        placeholder="Write your answer here."
+      />
+      <br/>
+      <button
+        v-on:click="showAlert"
+        v-bind:class="{'inactive': !correctAnswer}"
+        type="button"
+        name="button"
+      >Next</button>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+  </body>
+</html>

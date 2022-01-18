@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using the v-for directive with the key attribute</title>
+  </head>
+  <body>
+
+    <div id="app" v-cloak>
+      <h1>Super To-Do Application</h1>
+      <hr>
+      <h3>Enter To-Do</h3>
+      <input
+        v-model="newToDo"
+        v-on:keyup.enter="addToDo"
+        type="text"
+        placeholder="to-do"
+      >
+      <br>
+      <button
+        v-on:click="addToDo"
+      >Add To-Do</button>
+      <hr>
+      <ul>
+        <li
+          v-for="(todo, index) in todos"
+          :key="todo"
+          v-on:click.stop="removeToDo(index)"
+        >
+          {{todo}}
+          <input
+            v-on:click.stop
+            placeholder="Goal of task here"
+          />
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+  </body>
+</html>

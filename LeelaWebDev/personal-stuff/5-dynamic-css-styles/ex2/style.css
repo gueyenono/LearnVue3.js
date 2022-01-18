@@ -1,0 +1,8 @@
+.inactive {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+button {
+  font-weight: bold;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using Dynamic CSS Styles in Vue</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <div
+        v-bind:class="['box', {'colored-box': boxASelected}]"
+        v-on:click="toggleBoxColor('A')"
+      ></div>
+      <div
+        :class="['box', {'colored-box': boxBSelected}]"
+        v-on:click="toggleBoxColor('B')"
+      ></div>
+      <div
+        :class="['box', {'colored-box': boxCSelected}]"
+        v-on:click="toggleBoxColor('C')"
+      ></div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+  </body>
+</html>
