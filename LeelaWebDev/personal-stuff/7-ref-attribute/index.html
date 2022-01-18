@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using the ref directive in Vue 3</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>Display Message</h1>
+      <label>Enter message</label>
+      <input
+        v-on:keyup.enter="displayMsg"
+        ref="textInput"
+        placeholder="Message"
+      />
+      <button
+        v-on:click.prevent="displayMsg"
+        type="button"
+        name="button"
+      >Enter</button>
+      <div class="msg">
+        {{ msg }}
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+  </body>
+</html>
