@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Using Lifecycle Hooks in Vue 3</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>Using Lifecycle Hooks</h1>
+      <h2>Increment the counter</h2>
+      <button @click.prevent="count++">Increment</button>
+      <button @click.prevent="count--">Decrement</button>
+      <div class="counter">
+        {{count}}
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+  </body>
+</html>
