@@ -34,7 +34,10 @@ export default {
     //   required: true,
     //   default: new Date(Date.now())
     // },
-    married: String,
+    married: {
+      type: String,
+      required: true
+    },
   },
 }
 </script>
